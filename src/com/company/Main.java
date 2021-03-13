@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Animal dog = new Animal("cat");
-        dog.name = "Szarik";
+        dog.name = "Rysiu";
         Phone phone1 = new Phone("Apple", "A43", "iOS", 16.11);
 
         Human human1 = new Human();
