@@ -15,7 +15,7 @@ public class Main {
         dog.feed();
         dog.takeForAWalk();
         dog.takeForAWalk();
-        dog.takeForAWalk();
+
         dog.feed();
         human1.mobilePhone = phone1;
     }
