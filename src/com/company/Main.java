@@ -18,5 +18,9 @@ public class Main {
 
         dog.feed();
         human1.mobilePhone = phone1;
+
+        Car car1 = new Car("R8","Audi");
+        human1.vehicle = car1;
+        System.out.println(human1.vehicle.producent);
     }
 }

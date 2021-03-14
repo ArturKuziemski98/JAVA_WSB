@@ -7,4 +7,5 @@ public class Human {
     String gender;
     Animal pet;
     Phone mobilePhone;
+    Car vehicle;
 }
