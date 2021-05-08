@@ -22,5 +22,8 @@ public class Main {
         Car car1 = new Car("R8","Audi");
         human1.vehicle = car1;
         System.out.println(human1.vehicle.producent);
+        human1.setSalary(2000.00);
+        human1.getSalary();
+
     }
 }
