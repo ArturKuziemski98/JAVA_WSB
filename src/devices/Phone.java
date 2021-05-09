@@ -1,10 +1,10 @@
-package com.company;
+package devices;
 
 public class Phone {
-    final String producer;
-    final String model;
-    final String operatingSystem;
-    final Double screenSize;
+    public final String producer;
+    public final String model;
+    public final String operatingSystem;
+    public final Double screenSize;
 
     public Phone(String producer, String model, String operatingSystem, Double screenSize) {
         this.producer = producer;
@@ -15,5 +15,8 @@ public class Phone {
 
     String getOSVersion() {
         return "4.23.1";
+    }
+    public String toString(){
+        return "Producer: "+producer+", Model: "+model+", Operating system: "+operatingSystem+", ScreenSize: "+screenSize;
     }
 }

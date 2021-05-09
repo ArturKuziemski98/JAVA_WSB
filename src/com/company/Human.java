@@ -1,4 +1,8 @@
 package com.company;
+import devices.*;
+
+import devices.Car;
+import devices.Phone;
 
 public class Human {
     String firstName;
@@ -45,5 +49,8 @@ public class Human {
     }
     public Car getVehicle(){
         return this.vehicle;
+    }
+    public String toString(){
+        return "First name: "+firstName+", Last name: "+lastName+", Age: "+age+", Gender: "+gender+", Pet: "+pet+", Mobile phone: "+mobilePhone+", Vehicle: "+vehicle+", Salary: "+salary;
     }
 }

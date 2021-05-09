@@ -1,4 +1,8 @@
 package com.company;
+import devices.*;
+
+import devices.Car;
+import devices.Phone;
 
 public class Main {
 
@@ -23,7 +27,7 @@ public class Main {
         Car car2 = new Car("R8","Audi","Blue","fast", 3000.00);
         //human1.vehicle = car1;
         //System.out.println(human1.vehicle.producent);
-        human1.setSalary(2000.00);
+        human1.setSalary(4000.00);
         human1.getSalary();
         human1.setVehicle(car1);
         human1.getVehicle();
@@ -31,5 +35,8 @@ public class Main {
         System.out.println(dog);
         System.out.println(car1);
         System.out.println(car2);
+        System.out.println(phone1);
+        System.out.println(human1);
+
     }
 }
