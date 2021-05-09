@@ -1,16 +1,14 @@
 package devices;
 
-public class Phone {
-    public final String producer;
-    public final String model;
-    public final String operatingSystem;
-    public final Double screenSize;
+public class Phone extends Device{
 
-    public Phone(String producer, String model, String operatingSystem, Double screenSize) {
-        this.producer = producer;
-        this.model = model;
-        this.operatingSystem = operatingSystem;
-        this.screenSize = screenSize;
+    public  String operatingSystem;
+    public  Double screenSize;
+
+    public Phone(String model, String producer,String yearOfProduction, String operatingSystem, Double screenSize) {
+       super(model,producer,yearOfProduction);
+       this.operatingSystem = operatingSystem;
+       this.screenSize = screenSize;
     }
 
     String getOSVersion() {
