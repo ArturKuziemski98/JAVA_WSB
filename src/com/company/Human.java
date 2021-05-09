@@ -7,7 +7,7 @@ public class Human {
     String gender;
     Animal pet;
     Phone mobilePhone;
-    Car vehicle;
+    private Car vehicle;
     private double salary;
 
 
@@ -28,6 +28,22 @@ public class Human {
             System.out.println("Please, collect annex to the contract from Hania from the staff!");
             System.out.println("ZUS and US have been informed about the salary change, there is no need to hide it :D ");
         this.salary = salaryNew;
+        }
+    }
+    public Car getVehicle(){
+        return this.vehicle;
+    }
+    public void setVehicle(Car newCar){
+        if (this.salary > this.vehicle.value) {
+            System.out.println("You bought the car with cash!");
+            this.vehicle = newCar;
+        }
+         else if(vehicle.value/12 < this.salary){
+             System.out.println("You bought the car with credit!");
+             this.vehicle = newCar ;
+        }
+         else{
+             System.out.println("Find a new job or get a raise! You cant afford the car.");
         }
     }
 }
