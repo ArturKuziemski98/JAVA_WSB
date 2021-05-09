@@ -8,10 +8,10 @@ public class Human {
     Animal pet;
     Phone mobilePhone;
     private Car vehicle;
-    private double salary;
+    private Double salary;
 
 
-    public  double getSalary(){
+    public  Double getSalary(){
     System.out.println("Todays date: 08.05.2021");
     System.out.print("Salary: "+this.salary);
     return this.salary;
@@ -30,20 +30,20 @@ public class Human {
         this.salary = salaryNew;
         }
     }
-    public Car getVehicle(){
-        return this.vehicle;
-    }
     public void setVehicle(Car newCar){
-        if (this.salary > this.vehicle.value) {
+        if (this.salary > newCar.value) {
             System.out.println("You bought the car with cash!");
             this.vehicle = newCar;
         }
-         else if(vehicle.value/12 < this.salary){
+        else if (newCar.value/12 < this.salary){
              System.out.println("You bought the car with credit!");
              this.vehicle = newCar ;
         }
          else{
              System.out.println("Find a new job or get a raise! You cant afford the car.");
         }
+    }
+    public Car getVehicle(){
+        return this.vehicle;
     }
 }

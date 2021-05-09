@@ -5,11 +5,14 @@ public class Car {
     final String producent;
     public String color;
     private String speed;
-    double value;
+    Double value;
 
-Car(String model,String producent,double value){
+Car(String model,String producent,String color,String speed,Double value){
     this.model = model;
     this.producent = producent;
+    this.color = color;
+    this.speed = speed;
+    this.value = value;
 }
 
 }

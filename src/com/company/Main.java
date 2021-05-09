@@ -19,12 +19,17 @@ public class Main {
         dog.feed();
         human1.mobilePhone = phone1;
 
-        Car car1 = new Car("R8","Audi",3000.00);
+        Car car1 = new Car("R8","Audi","Blue","fast", 3000.00);
+        Car car2 = new Car("R8","Audi","Blue","fast", 3000.00);
         //human1.vehicle = car1;
         //System.out.println(human1.vehicle.producent);
         human1.setSalary(2000.00);
         human1.getSalary();
         human1.setVehicle(car1);
         human1.getVehicle();
+        System.out.println(new Car("R8","Audi","Blue","fast", 3000.00).equals(new Car("R8","Audi","Blue","fast", 3000.00)));
+        System.out.println(dog);
+        System.out.println(car1);
+        System.out.println(car2);
     }
 }
