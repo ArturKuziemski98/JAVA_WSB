@@ -37,6 +37,6 @@ public class Main {
         System.out.println(car2);
         System.out.println(phone1);
         System.out.println(human1);
-
+       Car.turnOn();
     }
 }

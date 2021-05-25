@@ -15,6 +15,9 @@ public class Phone extends Device{
         return "4.23.1";
     }
     public String toString(){
-        return "Producer: "+producer+", Model: "+model+", Operating system: "+operatingSystem+", ScreenSize: "+screenSize;
+        return "Producer: "+producer+", Model: "+model+", Year of production: "+yearOfProduction+", Operating system: "+operatingSystem+", ScreenSize: "+screenSize;
+    }
+    public String turnOn(){
+        return "Phone turned on!";
     }
 }

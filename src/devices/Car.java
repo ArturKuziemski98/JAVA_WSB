@@ -13,7 +13,9 @@ public Car(String model, String producer,String yearOfProduction, String color, 
  this.value = value;
 }
 public String toString(){
-    return "Model: "+model+", Producent: "+producer+", Color: "+color+", Spped: "+speed+", Value: "+value;
+    return "Model: "+model+", Producer: "+producer+", Year of production: "+yearOfProduction+", Color: "+color+", Spped: "+speed+", Value: "+value;
 }
-
+public String turnOn(){
+    return "Car started!";
+}
 }
