@@ -14,5 +14,5 @@ public abstract class Device {
     public String toString(){
         return "Producer: "+producer+", Model: "+model+", Year od production: "+yearOfProduction;
     }
-    public abstract String turnOn();
+    public abstract void turnOn();
 }

@@ -17,7 +17,7 @@ public class Phone extends Device{
     public String toString(){
         return "Producer: "+producer+", Model: "+model+", Year of production: "+yearOfProduction+", Operating system: "+operatingSystem+", ScreenSize: "+screenSize;
     }
-    public String turnOn(){
-        return "Phone turned on!";
+    public void turnOn(){
+        System.out.println("Phone turned on!");
     }
 }
