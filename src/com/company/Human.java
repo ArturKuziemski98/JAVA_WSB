@@ -1,8 +1,9 @@
 package com.company;
-import devices.*;
+import creatures.Animal;
 
 import devices.Car;
 import devices.Phone;
+import creatures.*;
 
 public class Human {
     String firstName;

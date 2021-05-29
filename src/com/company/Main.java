@@ -1,5 +1,5 @@
 package com.company;
-import devices.*;
+import creatures.*;
 
 import devices.Car;
 import devices.Phone;
@@ -7,8 +7,8 @@ import devices.Phone;
 public class Main {
 
     public static void main(String[] args) {
-        Animal dog = new Animal("cat");
-        Animal pet1 = new Animal("cat");
+        Pet pet1 = new Pet("Cat");
+        Pet dog = new Pet("Cat");
         pet1.name = "Kiziul";
         dog.name = "Rysiu";
         Phone phone1 = new Phone("Apple", "A43", "20.01.2021","iOS", 16.11);
