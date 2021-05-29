@@ -1,8 +1,10 @@
 package devices;
 
+import com.company.Human;
+
 import java.util.Locale;
 
-public abstract class Device {
+public abstract class Device{
     public  String producer;
     public  String model;
     public  String yearOfProduction;
@@ -15,4 +17,5 @@ public abstract class Device {
         return "Producer: "+producer+", Model: "+model+", Year od production: "+yearOfProduction;
     }
     public abstract void turnOn();
+
 }

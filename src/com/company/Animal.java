@@ -2,7 +2,7 @@ package com.company;
 
 import java.io.File;
 
-public class Animal {
+public class Animal implements Sellable {
     final String species;
     public String name;
     private Double weight;
@@ -37,5 +37,20 @@ public class Animal {
     }
     public String toString(){
         return "Species: "+species+", Name: "+name+", Weight: "+weight;
+    }
+    public void sell(Human buyer, Human seller, Double price){
+        if (seller.pet == null){
+            System.out.println("Buyer has to have an Animal to sell.");
+        }
+        else if(price> buyer.cash){
+            System.out.println("You have to have enough cash to buy something.");
+        }
+        else{
+            buyer.cash = buyer.cash - price;
+            seller.cash = seller.cash + price;
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            System.out.println("Transaction has been finalized.");
+        }
     }
 }

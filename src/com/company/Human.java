@@ -9,10 +9,11 @@ public class Human {
     String lastName;
     Integer age;
     String gender;
-    Animal pet;
-    Phone mobilePhone;
+    public Animal pet;
+    public Phone mobilePhone;
     private Car vehicle;
     private Double salary;
+    public Double cash;
 
 
     public  Double getSalary(){
