@@ -12,7 +12,7 @@ public class Main {
         pet1.name = "Kiziul";
         dog.name = "Rysiu";
         Phone phone1 = new Phone("Apple", "A43", "20.01.2021","iOS", 16.11);
-
+        Phone phone2 = new Phone("Huwawei","Bill","20.05.2018","Android",16.11);
         Human human1 = new Human();
         Human human2 = new Human();
         System.out.println("Producer = " + phone1.producer);
@@ -48,5 +48,7 @@ public class Main {
        pet1.sell(human1,human2,200.00);
        System.out.println(human1.cash+"Cash2: "+human2.cash+"Pet1:"+human1.pet+"Pet2:"+human2.pet);
        //sprawdzam tylko dla zwierzat inne rzeczy beda dzialac patrzac na to ze zmieniam tylko 1 rzecz w tych metodach
+        phone1.sell(human1,human2,100.00);
+        System.out.println(human2.mobilePhone);
     }
 }

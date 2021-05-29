@@ -25,7 +25,7 @@ public class Phone extends Device implements Sellable{
     }
     public void sell(Human buyer, Human seller, Double price){
         if (seller.mobilePhone == null){
-            System.out.println("Buyer has to have an Animal to sell.");
+            System.out.println("Buyer has to have an mobile phone to sell.");
         }
         else if(price> buyer.cash){
             System.out.println("You have to have enough cash to buy something.");
