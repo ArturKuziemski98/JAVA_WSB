@@ -1,8 +1,8 @@
 package com.company;
 import creatures.*;
 
-import devices.Car;
-import devices.Phone;
+import devices.*;
+
 
 public class Main {
 
@@ -26,22 +26,22 @@ public class Main {
         dog.feed();
         human1.mobilePhone = phone1;
 
-        Car car1 = new Car("R8","Audi","10.20.2020","Blue","fast", 3000.00);
-        Car car2 = new Car("R8","Audi","08.90.1998","Blue","fast", 3000.00);
+        Electric electric1 = new Electric("R8","Audi","10.20.2020","Blue","fast", 3000.00);
+        Disel disel1 = new Disel("R8","Audi","08.90.1998","Blue","fast", 3000.00);
         //human1.vehicle = car1;
         //System.out.println(human1.vehicle.producent);
         human1.setSalary(4000.00);
         human1.getSalary();
-        human1.setVehicle(car1);
+        human1.setVehicle(electric1);
         human1.getVehicle();
-        System.out.println(new Car("R8","Audi","02.02.2000","Blue","fast", 3000.00).equals(new Car("R8","Audi","02.02.2000","Blue","fast", 3000.00)));
+        System.out.println(new LPG("R8","Audi","02.02.2000","Blue","fast", 3000.00).equals(new LPG("R8","Audi","02.02.2000","Blue","fast", 3000.00)));
         System.out.println(dog);
-        System.out.println(car1);
-        System.out.println(car2);
+        System.out.println(electric1);
+        System.out.println(disel1);
         System.out.println(phone1);
         System.out.println(human1);
        phone1.turnOn();
-       car1.turnOn();
+       electric1.turnOn();
        human1.cash = 10000.00;
        human2.pet = pet1;
        human2.cash = 100.00;

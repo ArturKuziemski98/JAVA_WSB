@@ -1,7 +1,7 @@
 package devices;
 import com.company.*;
 
-public class Car extends Device{
+public abstract class Car extends Device{
     public String color;
     public String speed;
     public Double value;
@@ -18,5 +18,5 @@ public String toString(){
 public void turnOn(){
     System.out.println("Car Started!");
 }
-
+abstract void refuel();
 }
