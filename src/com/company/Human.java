@@ -11,7 +11,7 @@ public class Human {
     String gender;
     public Animal pet;
     public Phone mobilePhone;
-    private Object[] garage;
+    public Object[] garage;
     private Double salary;
     public Double cash;
     public int carsc;

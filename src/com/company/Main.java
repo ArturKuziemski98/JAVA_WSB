@@ -53,5 +53,6 @@ public class Main {
         human1.getCar(1);
         human1.getCar(2);
         human1.garageValue();
+        electric1.sell(human2,human1,200.00);
     }
 }
