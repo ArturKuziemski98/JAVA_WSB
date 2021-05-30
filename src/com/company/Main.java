@@ -13,8 +13,8 @@ public class Main {
         dog.name = "Rysiu";
         Phone phone1 = new Phone("Apple", "A43", "20.01.2021","iOS", 16.11);
         Phone phone2 = new Phone("Huwawei","Bill","20.05.2018","Android",16.11);
-        Human human1 = new Human();
-        Human human2 = new Human();
+        Human human1 = new Human("Artur","Kuziemski",23,"Male");
+        Human human2 = new Human("Adam","Małysz",50,"Male");
         System.out.println("Producer = " + phone1.producer);
         System.out.println("Name = " + dog.name);
         dog.feed();
@@ -32,8 +32,6 @@ public class Main {
         //System.out.println(human1.vehicle.producent);
         human1.setSalary(4000.00);
         human1.getSalary();
-        human1.setVehicle(electric1);
-        human1.getVehicle();
         System.out.println(new LPG("R8","Audi","02.02.2000","Blue","fast", 3000.00).equals(new LPG("R8","Audi","02.02.2000","Blue","fast", 3000.00)));
         System.out.println(dog);
         System.out.println(electric1);
@@ -50,5 +48,10 @@ public class Main {
        //sprawdzam tylko dla zwierzat inne rzeczy beda dzialac patrzac na to ze zmieniam tylko 1 rzecz w tych metodach
         phone1.sell(human1,human2,100.00);
         System.out.println(human2.mobilePhone);
+        human1.setCar(1,electric1);
+        human1.setCar(2,disel1);
+        human1.getCar(1);
+        human1.getCar(2);
+        human1.garageValue();
     }
 }

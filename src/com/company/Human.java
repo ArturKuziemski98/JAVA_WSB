@@ -1,8 +1,7 @@
 package com.company;
 import creatures.Animal;
-
-import devices.Car;
-import devices.Phone;
+import java.util.*;
+import devices.*;
 import creatures.*;
 
 public class Human {
@@ -12,11 +11,20 @@ public class Human {
     String gender;
     public Animal pet;
     public Phone mobilePhone;
-    private Car vehicle;
+    private Object[] garage;
     private Double salary;
     public Double cash;
+    public int carsc;
 
-
+    public Human(String firstName,String lastName,Integer age,String gender){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        this.garage = garage;
+        carsc = 0;
+        garage = new Object[10];
+    }
     public  Double getSalary(){
     System.out.println("Todays date: 08.05.2021");
     System.out.print("Salary: "+this.salary);
@@ -36,23 +44,34 @@ public class Human {
         this.salary = salaryNew;
         }
     }
-    public void setVehicle(Car newCar){
+    public void garageValue(){
+        int c = 0;
+        int sum = 0;
+        for (c=0;c<garage.length;c++){
+            sum = sum + 1;
+        }
+        System.out.println(sum);
+    }
+    public void garageSort(){
+
+    }
+    public void setCar(int place, Car newCar){
         if (this.salary > newCar.value) {
             System.out.println("You bought the car with cash!");
-            this.vehicle = newCar;
+            this.garage[place] = newCar;
         }
         else if (newCar.value/12 < this.salary){
              System.out.println("You bought the car with credit!");
-             this.vehicle = newCar ;
+             this.garage[place] = newCar ;
         }
          else{
              System.out.println("Find a new job or get a raise! You cant afford the car.");
         }
     }
-    public Car getVehicle(){
-        return this.vehicle;
+    public void getCar(int place){
+        System.out.println(garage[place]);
     }
     public String toString(){
-        return "First name: "+firstName+", Last name: "+lastName+", Age: "+age+", Gender: "+gender+", Pet: "+pet+", Mobile phone: "+mobilePhone+", Vehicle: "+vehicle+", Salary: "+salary;
+        return "First name: "+firstName+", Last name: "+lastName+", Age: "+age+", Gender: "+gender+", Pet: "+pet+", Mobile phone: "+mobilePhone+", Vehicle: "+garage+", Salary: "+salary;
     }
 }
