@@ -3,12 +3,15 @@ import creatures.*;
 
 import devices.*;
 
+import javax.xml.stream.FactoryConfigurationError;
+
 
 public class Main {
 
     public static void main(String[] args) {
         Pet pet1 = new Pet("Cat");
         Pet dog = new Pet("Cat");
+        FarmAnimal cow = new FarmAnimal("Cow");
         pet1.name = "Kiziul";
         dog.name = "Rysiu";
         Phone phone1 = new Phone("Apple", "A43", "20.01.2021","iOS", 16.11);
@@ -53,6 +56,7 @@ public class Main {
         human1.getCar(1);
         human1.getCar(2);
         human1.garageValue();
-        electric1.sell(human2,human1,200.00);
+        electric1.sell(human1,human2,200.00);
+        cow.beEaten();
     }
 }

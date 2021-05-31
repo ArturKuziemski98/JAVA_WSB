@@ -21,7 +21,6 @@ public class Human {
         this.lastName = lastName;
         this.age = age;
         this.gender = gender;
-        this.garage = garage;
         carsc = 0;
         garage = new Object[10];
     }
@@ -45,15 +44,10 @@ public class Human {
         }
     }
     public void garageValue(){
-        int c = 0;
-        int sum = 0;
-        for (c=0;c<garage.length;c++){
-            sum = sum + 1;
-        }
-        System.out.println(sum);
+
+    System.out.println(garage[0]);
     }
     public void garageSort(){
-
     }
     public void setCar(int place, Car newCar){
         if (this.salary > newCar.value) {

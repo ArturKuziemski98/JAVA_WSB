@@ -6,7 +6,7 @@ import java.io.File;
 public abstract class Animal implements Sellable,Feedable {
     final String species;
     public String name;
-    private Double weight;
+    public Double weight;
     File pic;
     static public final double DEFAULT_ANIMAL_WEIGHT = 1.0;
     public Animal(String species) {

@@ -6,6 +6,7 @@ public class FarmAnimal extends Animal implements Edible {
         super(species);
     }
 public void beEaten(){
-        System.out.println("You can eat these animals.");
+        this.weight = 0.00;
+        System.out.println("This animal has been eaten.");
 }
 }
