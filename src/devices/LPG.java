@@ -5,6 +5,6 @@ public class LPG extends Car{
         super(model, producer, yearOfProduction, color, speed, value);
     }
     public void refuel(){
-
+    System.out.println("Car has been refueld.");
     }
 }

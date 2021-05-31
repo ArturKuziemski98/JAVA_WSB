@@ -5,6 +5,6 @@ public class Electric extends Car{
         super(model,producer,yearOfProduction,color,speed,value);
     }
     public void refuel(){
-
+        System.out.println("Cant refuel an electric car.");
     }
 }
