@@ -44,8 +44,8 @@ public class Human {
         }
     }
     public void garageValue(){
-
-    System.out.println(garage[0]);
+        for(int i =0;i<garage.length;i++) {
+        }
     }
     public void garageSort(){
     }

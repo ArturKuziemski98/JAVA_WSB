@@ -16,7 +16,9 @@ public abstract class Car extends Device {
     public String toString() {
         return "Model: " + model + ", Producer: " + producer + ", Year of production: " + yearOfProduction + ", Color: " + color + ", Spped: " + speed + ", Value: " + value;
     }
-
+    public Double showData(){
+    return this.value;
+    }
     public void turnOn() {
         System.out.println("Car Started!");
     }

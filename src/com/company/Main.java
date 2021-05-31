@@ -51,11 +51,10 @@ public class Main {
        //sprawdzam tylko dla zwierzat inne rzeczy beda dzialac patrzac na to ze zmieniam tylko 1 rzecz w tych metodach
         phone1.sell(human1,human2,100.00);
         System.out.println(human2.mobilePhone);
-        human1.setCar(1,electric1);
-        human1.setCar(2,disel1);
+        human1.setCar(0,electric1);
+        human1.setCar(1,disel1);
+        human1.getCar(0);
         human1.getCar(1);
-        human1.getCar(2);
-        human1.garageValue();
         electric1.sell(human1,human2,200.00);
         cow.beEaten();
     }
