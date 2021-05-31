@@ -16,8 +16,8 @@ public class Main {
         dog.name = "Rysiu";
         Phone phone1 = new Phone("Apple", "A43", "20.01.2021","iOS", 16.11);
         Phone phone2 = new Phone("Huwawei","Bill","20.05.2018","Android",16.11);
-        Human human1 = new Human("Artur","Kuziemski",23,"Male");
-        Human human2 = new Human("Adam","Małysz",50,"Male");
+        Human human1 = new Human("Artur","Kuziemski",23,"Male",10);
+        Human human2 = new Human("Adam","Małysz",50,"Male",10);
         System.out.println("Producer = " + phone1.producer);
         System.out.println("Name = " + dog.name);
         dog.feed();
@@ -56,6 +56,9 @@ public class Main {
         human1.getCar(0);
         human1.getCar(1);
         electric1.sell(human1,human2,200.00);
+        disel1.sell(human1,human2,200.00);
         cow.beEaten();
+        electric1.transactionsCount();
+        disel1.anyOwners();
     }
 }

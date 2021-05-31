@@ -11,7 +11,7 @@ public class Human {
     String gender;
     public Animal pet;
     public Phone mobilePhone;
-    public Object[] garage;
+    public Car[] garage;
     private Double salary;
     public Double cash;
     public int carsc;
@@ -22,7 +22,14 @@ public class Human {
         this.age = age;
         this.gender = gender;
         carsc = 0;
-        garage = new Object[10];
+    }
+    public Human(String firstName,String lastName,Integer age,String gender,Integer x){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        garage = new Car[x];
+        carsc = 0;
     }
     public  Double getSalary(){
     System.out.println("Todays date: 08.05.2021");
@@ -45,6 +52,7 @@ public class Human {
     }
     public void garageValue(){
         for(int i =0;i<garage.length;i++) {
+
         }
     }
     public void garageSort(){

@@ -8,6 +8,7 @@ public abstract class Device{
     public  String producer;
     public  String model;
     public  String yearOfProduction;
+    public Double value;
     public Device(String producer,String model,String yearOfProduction){
         this.producer = producer;
         this.model = model;
