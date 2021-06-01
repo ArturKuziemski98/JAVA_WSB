@@ -60,5 +60,7 @@ public class Main {
         cow.beEaten();
         electric1.transactionsCount();
         disel1.anyOwners();
+        human1.garageValue();
+        human1.garageSort();
     }
 }

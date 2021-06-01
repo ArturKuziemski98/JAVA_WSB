@@ -4,7 +4,7 @@ import java.util.*;
 import devices.*;
 import creatures.*;
 
-public class Human {
+public class Human  implements Comparable<Human>{
     String firstName;
     String lastName;
     Integer age;
@@ -51,11 +51,23 @@ public class Human {
         }
     }
     public void garageValue(){
+        double x =0;
         for(int i =0;i<garage.length;i++) {
-
+            if (this.garage[i] !=null) {
+                x += this.garage[i].value;
+            }
+            else {
+                break;
+            }
         }
+        System.out.println("Garage value: "+x);
+    }
+    @Override
+    public int compareTo(Human o){
+        return toString().compareTo(o.toString());
     }
     public void garageSort(){
+
     }
     public void setCar(int place, Car newCar){
         if (this.salary > newCar.value) {

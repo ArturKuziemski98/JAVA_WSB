@@ -34,14 +34,18 @@ public abstract class Car extends Device {
             for (int x=0;x<buyer.garage.length;x++){
                 if (buyer.garage[x] == null){
                    buyer.garage[x] = seller.garage[x];
+                    this.owner.add(buyer);
+                    seller.garage[0] = null;
+                    buyer.cash = buyer.cash - price;
+                    seller.cash = seller.cash + price;
+                    System.out.println("Transaction has been finalized.");
+                    Human last = this.owner.get(this.owner.size() - 1);
                    break;
                 }
+                else{
+                    continue;
+                }
             }
-            this.owner.add(buyer);
-            seller.garage[0] = null;
-            buyer.cash = buyer.cash - price;
-            seller.cash = seller.cash + price;
-            System.out.println("Transaction has been finalized.");
         }
     }
     public void anyOwners(){
