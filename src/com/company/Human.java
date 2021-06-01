@@ -4,7 +4,7 @@ import java.util.*;
 import devices.*;
 import creatures.*;
 
-public class Human  implements Comparable<Human>{
+public class Human implements Comparable<Human>{
     String firstName;
     String lastName;
     Integer age;

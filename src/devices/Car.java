@@ -51,8 +51,16 @@ public abstract class Car extends Device {
     public void anyOwners(){
     System.out.println("Is the ownership list empty? "+owner.isEmpty());
     }
-    public void transaction(){
+    public void transaction(Human human1,Human human2){
 
+        for (int i =1;i<this.owner.size();i++){
+        if (this.owner.get(i-1)==human1 &&  this.owner.get(i)==human2)
+        {
+            System.out.println("Owner A sold the car to owner B.(This is what we are looking for)");
+            break;
+        }
+         System.out.println("This transaction is not the one we are looking for, if statement is true a message will pop up.");
+        }
     }
     public void transactionsCount(){
         System.out.println("How many transactions: "+owner.size());

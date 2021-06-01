@@ -1,6 +1,7 @@
 package com.company;
 import creatures.*;
-
+import java.util.ArrayList;
+import java.util.Collections;
 import devices.*;
 
 import javax.xml.stream.FactoryConfigurationError;
@@ -52,10 +53,15 @@ public class Main {
         phone1.sell(human1,human2,100.00);
         System.out.println(human2.mobilePhone);
         human1.setCar(0,electric1);
+        //przy dodaniu samochodu do czlowieka nie jest dodawany do list właścicieli
+        //dlatego metoda transaction dziala dopiero po 2 sprzedaniu
         human1.setCar(1,disel1);
         human1.getCar(0);
         human1.getCar(1);
         electric1.sell(human1,human2,200.00);
+        electric1.sell(human2,human1,200.00);
+        electric1.sell(human1,human2,200.00);
+        electric1.sell(human2,human1,200.00);
         disel1.sell(human1,human2,200.00);
         cow.beEaten();
         electric1.transactionsCount();
@@ -66,5 +72,6 @@ public class Main {
         phone1.installNewApp(human1,app1);
         phone1.appCheck(app1);
         phone1.appCheck("Run");
+        electric1.transaction(human2,human1);
     }
 }
