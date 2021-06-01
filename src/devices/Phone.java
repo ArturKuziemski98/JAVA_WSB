@@ -10,6 +10,7 @@ public class Phone extends Device implements Sellable{
     static final String server = "https://server.com";
     static final String protocol = "Protcol";
     static final String version = "A1429";
+    public Set appSet = new HashSet();
 
     public Phone(String model, String producer,String yearOfProduction, String operatingSystem, Double screenSize) {
        super(model,producer,yearOfProduction);
@@ -52,5 +53,20 @@ public class Phone extends Device implements Sellable{
     }
     public void installAnnApp(List<String> name){
         System.out.println(name);
+    }
+    public void installNewApp(Human owner,Application app){
+        if ( owner.cash > app.price){
+                this.appSet.add(app);
+                owner.cash -= app.price;
+        }
+        else System.out.println("Not enought cash.");
+    }
+    public void appCheck(Application app){
+        System.out.println( this.appSet.contains(app) );
+    }
+    public void appCheck(String name){
+
+        String check = name;
+        System.out.println( this.appSet.contains(name) );
     }
 }

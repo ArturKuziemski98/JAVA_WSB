@@ -62,5 +62,9 @@ public class Main {
         disel1.anyOwners();
         human1.garageValue();
         human1.garageSort();
+        Application app1 = new Application("Run","1.2",400.00);
+        phone1.installNewApp(human1,app1);
+        phone1.appCheck(app1);
+        phone1.appCheck("Run");
     }
 }
