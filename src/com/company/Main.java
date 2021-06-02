@@ -69,9 +69,18 @@ public class Main {
         human1.garageValue();
         human1.garageSort();
         Application app1 = new Application("Run","1.2",400.00);
+        Application app2 = new Application("Jump","1.289",0.00);
+        Application app3 = new Application("Ahtung!","6.9",0.00);
         phone1.installNewApp(human1,app1);
+        phone1.installNewApp(human1,app2);
+        phone1.installNewApp(human1,app3);
         phone1.appCheck(app1);
-        phone1.appCheck("Run");
+        phone1.appCheck("Jump");
         electric1.transaction(human2,human1);
+        phone1.appCheck("XD");
+        phone1.appFree();
+        phone1.appAll();
+        phone1.appsAZ();
+        phone1.apps0();
     }
 }

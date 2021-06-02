@@ -10,7 +10,7 @@ public class Phone extends Device implements Sellable{
     static final String server = "https://server.com";
     static final String protocol = "Protcol";
     static final String version = "A1429";
-    public Set appSet = new HashSet();
+    public HashSet<Application> appSet = new HashSet<Application>();
 
     public Phone(String model, String producer,String yearOfProduction, String operatingSystem, Double screenSize) {
        super(model,producer,yearOfProduction);
@@ -58,15 +58,48 @@ public class Phone extends Device implements Sellable{
         if ( owner.cash > app.price){
                 this.appSet.add(app);
                 owner.cash -= app.price;
+                System.out.println("Installed new App!");
         }
         else System.out.println("Not enought cash.");
     }
     public void appCheck(Application app){
         System.out.println( this.appSet.contains(app) );
     }
-    public void appCheck(String name){
-
-        String check = name;
-        System.out.println( this.appSet.contains(name) );
+    public void appCheck(String name2){
+        int index = 0;
+        for (Application x:appSet){
+            if (x.name == name2) {
+                index += 1;
+                break;
+            }
+        }
+        if (index == 1) System.out.println("App with that name is installed.");
+        else System.out.println("App with that name is not installed");
+    }
+    public void appFree() {
+        int index = 0;
+        for (Application x : appSet) {
+            if (x.price == 0.00) {
+                index +=1;
+                System.out.println(x.name);
+            }
+        }
+        if (index >= 1) System.out.println("These are free apps^");
+        else System.out.println("There are no free apps.");
+    }
+    public void appAll() {
+        for (Application x : appSet) {
+                System.out.println("Apps installed on this phone: "+x.name+x.version+x.price);
+        }
+    }
+    public void appsAZ(){
+    List<Application> sortedList = new ArrayList<Application>(appSet);
+    Collections.sort(sortedList);
+    System.out.println(sortedList);
+    }
+    public void apps0(){
+    List<Application> sortedList = new ArrayList<Application>(appSet);
+    Collections.sort(sortedList, new CompareApp());
+    System.out.println(sortedList);
     }
 }
