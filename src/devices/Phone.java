@@ -1,4 +1,5 @@
 package devices;
+import java.net.URL;
 import java.util.*;
 import com.company.Human;
 import com.company.Sellable;
@@ -7,6 +8,7 @@ public class Phone extends Device implements Sellable{
 
     public  String operatingSystem;
     public  Double screenSize;
+    static public final String DEFAULT_APP_VERSION = "latest";
     static final String server = "https://server.com";
     static final String protocol = "Protcol";
     static final String version = "A1429";
@@ -41,16 +43,30 @@ public class Phone extends Device implements Sellable{
         }
     }
     public void installAnnApp(String name){
-    System.out.println(name);
+    this.installAnnApp(name,DEFAULT_APP_VERSION);
     }
     public void installAnnApp(String name,String version){
-    System.out.println(name+version);
+        this.installAnnApp(name,version,server);
     }
     public void installAnnApp(String name,String version,String server){
-    System.out.println(name+version+server);
+        this.installAnnApp(name,version,server);
     }
     public void installAnnApp(List<String> name){
-        System.out.println(name);
+        for (String names : name) {
+            this.installAnnApp(name);
+        }
+    }
+    public void installAnnApp(URL url){
+        //sprawdzenie czy aplikacja jest płatna
+        //obsługa akceptacji płatności
+        //sprawdzanie czy mam kasę jeżeli jest płatna
+        //sprawdzenie miejsca na dysku
+        //obsługa płatności
+        //pobieranie
+        //walidacja pliku
+        //skanowanie wirusów
+        //rozpakowanie
+        //instalacja
     }
     public void installNewApp(Human owner,Application app){
         if ( owner.cash > app.price){
