@@ -50,6 +50,9 @@ public class Human implements Comparable<Human>{
         this.salary = salaryNew;
         }
     }
+    public void sell(){
+        System.out.println("You cant sell humans!");
+    }
     public void garageValue(){
         double x =0;
         for(int i =0;i<garage.length;i++) {

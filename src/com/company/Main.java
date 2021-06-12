@@ -63,6 +63,7 @@ public class Main {
         electric1.sell(human1,human2,200.00);
         electric1.sell(human2,human1,200.00);
         disel1.sell(human1,human2,200.00);
+        human1.sell();
         cow.beEaten();
         electric1.transactionsCount();
         disel1.anyOwners();
@@ -82,5 +83,6 @@ public class Main {
         phone1.appAll();
         phone1.appsAZ();
         phone1.apps0();
+        disel1.refuel();
     }
 }

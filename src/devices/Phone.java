@@ -21,9 +21,7 @@ public class Phone extends Device implements Sellable{
     String getOSVersion() {
         return "4.23.1";
     }
-    public String toString(){
-        return "Producer: "+producer+", Model: "+model+", Year of production: "+yearOfProduction+", Operating system: "+operatingSystem+", ScreenSize: "+screenSize;
-    }
+
     public void turnOn(){
         System.out.println("Phone turned on!");
     }
