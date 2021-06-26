@@ -9,14 +9,14 @@ import javax.xml.stream.FactoryConfigurationError;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Pet pet1 = new Pet("Cat");
         Pet dog = new Pet("Cat");
         FarmAnimal cow = new FarmAnimal("Cow");
         pet1.name = "Kiziul";
         dog.name = "Rysiu";
-        Phone phone1 = new Phone("Apple", "A43", "20.01.2021","iOS", 16.11);
-        Phone phone2 = new Phone("Huwawei","Bill","20.05.2018","Android",16.11);
+        Phone phone1 = new Phone("Apple", "A43", 2021,"iOS", 16.11);
+        Phone phone2 = new Phone("Huwawei","Bill",2018,"Android",16.11);
         Human human1 = new Human("Artur","Kuziemski",23,"Male",10);
         Human human2 = new Human("Adam","Małysz",50,"Male",10);
         System.out.println("Producer = " + phone1.producer);
@@ -30,13 +30,13 @@ public class Main {
         dog.feed();
         human1.mobilePhone = phone1;
 
-        Electric electric1 = new Electric("R8","Audi","10.20.2020","Blue","fast", 3000.00);
-        Disel disel1 = new Disel("R8","Audi","08.90.1998","Blue","fast", 3000.00);
+        Electric electric1 = new Electric("R8","Audi",2020,"Blue","fast", 3000.00);
+        Disel disel1 = new Disel("R5","BMW",1998,"Blue","fast", 3000.00);
         //human1.vehicle = car1;
         //System.out.println(human1.vehicle.producent);
         human1.setSalary(4000.00);
         human1.getSalary();
-        System.out.println(new LPG("R8","Audi","02.02.2000","Blue","fast", 3000.00).equals(new LPG("R8","Audi","02.02.2000","Blue","fast", 3000.00)));
+        System.out.println(new LPG("R8","Audi",2000,"Blue","fast", 3000.00).equals(new LPG("R8","Audi",2000,"Blue","fast", 3000.00)));
         System.out.println(dog);
         System.out.println(electric1);
         System.out.println(disel1);
@@ -58,17 +58,16 @@ public class Main {
         human1.setCar(1,disel1);
         human1.getCar(0);
         human1.getCar(1);
-        electric1.sell(human1,human2,200.00);
+        human1.garageSort();
         electric1.sell(human2,human1,200.00);
         electric1.sell(human1,human2,200.00);
         electric1.sell(human2,human1,200.00);
-        disel1.sell(human1,human2,200.00);
         human1.sell();
         cow.beEaten();
         electric1.transactionsCount();
         disel1.anyOwners();
         human1.garageValue();
-        human1.garageSort();
+
         Application app1 = new Application("Run","1.2",400.00);
         Application app2 = new Application("Jump","1.289",0.00);
         Application app3 = new Application("Ahtung!","6.9",0.00);

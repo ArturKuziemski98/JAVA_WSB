@@ -2,12 +2,12 @@ package devices;
 import com.company.*;
 import java.util.ArrayList;
 
-public abstract class Car extends Device {
+public abstract class Car extends Device implements Comparable<Car> {
     public String color;
     public String speed;
     public Double value;
     public ArrayList<Human>  owner = new ArrayList<Human>(5);
-    public Car(String model, String producer, String yearOfProduction, String color, String speed, Double value) {
+    public Car(String model, String producer, Integer yearOfProduction, String color, String speed, Double value) {
         super(model, producer, yearOfProduction);
         this.color = color;
         this.speed = speed;
@@ -24,29 +24,21 @@ public abstract class Car extends Device {
     }
 
     abstract void refuel();
-    public void sell(Human buyer, Human seller, Double price) {
-        if (seller.garage == null) {
-            System.out.println("Seller has to have a car to sell and be the last owner.");
-        } else if (price > buyer.cash) {
-            System.out.println("You have to have enough cash to buy something.");
-        }
-        else {
-            for (int x=0;x<buyer.garage.length;x++){
-                if (buyer.garage[x] == null){
-                   buyer.garage[x] = seller.garage[x];
-                    this.owner.add(buyer);
-                    seller.garage[0] = null;
-                    buyer.cash = buyer.cash - price;
-                    seller.cash = seller.cash + price;
-                    System.out.println("Transaction has been finalized.");
-                    Human last = this.owner.get(this.owner.size() - 1);
-                   break;
-                }
-                else{
-                    continue;
-                }
-            }
-        }
+    public void sell(Human buyer, Human seller, Double price) throws Exception {
+      if (!seller.haveCar(this)) {
+          throw new Exception("STOLEN CAR!");
+      }
+      if (!buyer.haveFreeSpace()){
+          throw new Exception("You need free space!");
+      }
+      if (buyer.getCash() < price){
+          throw new Exception("You need cash!");
+      }
+      seller.removeCar(this);
+      buyer.addCar(this);
+      seller.setCash(seller.getCash() + price);
+      buyer.setCash(buyer.getCash() - price);
+      System.out.println("Transaction completed!");
     }
     public void anyOwners(){
     System.out.println("Is the ownership list empty? "+owner.isEmpty());

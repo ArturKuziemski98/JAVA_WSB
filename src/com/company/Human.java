@@ -5,23 +5,23 @@ import devices.*;
 import creatures.*;
 
 public class Human implements Comparable<Human>{
+    private static final int DEFAULT_GARAGE_SIZE = 4 ;
     String firstName;
     String lastName;
     Integer age;
     String gender;
     public Animal pet;
     public Phone mobilePhone;
-    public Car[] garage;
+    private Car[] garage;
     private Double salary;
     public Double cash;
-    public int carsc;
 
     public Human(String firstName,String lastName,Integer age,String gender){
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.gender = gender;
-        carsc = 0;
+        this.garage = new Car[DEFAULT_GARAGE_SIZE];
     }
     public Human(String firstName,String lastName,Integer age,String gender,Integer x){
         this.firstName = firstName;
@@ -29,7 +29,6 @@ public class Human implements Comparable<Human>{
         this.age = age;
         this.gender = gender;
         garage = new Car[x];
-        carsc = 0;
     }
     public  Double getSalary(){
     System.out.println("Todays date: 08.05.2021");
@@ -70,7 +69,7 @@ public class Human implements Comparable<Human>{
         return toString().compareTo(o.toString());
     }
     public void garageSort(){
-
+        Arrays.sort(garage,new CarSort());
     }
     public void setCar(int place, Car newCar){
         if (this.salary > newCar.value) {
@@ -90,5 +89,43 @@ public class Human implements Comparable<Human>{
     }
     public String toString(){
         return "First name: "+firstName+", Last name: "+lastName+", Age: "+age+", Gender: "+gender+", Pet: "+pet+", Mobile phone: "+mobilePhone+", Vehicle: "+garage+", Salary: "+salary;
+    }
+
+    public boolean haveCar(Car car) {
+        for (int i = 0; i<this.garage.length;i++){
+            if(car == this.garage[i])
+                return true;
+        }
+        return false;
+    }
+
+    public boolean haveFreeSpace() {
+        for (int i=0;i<this.garage.length;i++){
+            if(this.garage[i] == null)
+                return true;
+        }
+        return false;
+    }
+
+    public double getCash() {
+        return this.cash;
+    }
+
+    public void removeCar(Car car) {
+        for (int i=0;i<this.garage.length;i++){
+            if (this.garage[i] == car)
+                this.garage[i] = null;
+        }
+    }
+
+    public void addCar(Car car) {
+        for (int i=0;i<this.garage.length;i++){
+            if (this.garage[i] == null)
+                this.garage[i] = car;
+        }
+    }
+
+    public void setCash(double v) {
+        this.cash = v;
     }
 }

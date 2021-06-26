@@ -14,7 +14,7 @@ public class Phone extends Device implements Sellable{
     static final String version = "A1429";
     public HashSet<Application> appSet = new HashSet<Application>();
 
-    public Phone(String model, String producer,String yearOfProduction, String operatingSystem, Double screenSize) {
+    public Phone(String model, String producer,Integer yearOfProduction, String operatingSystem, Double screenSize) {
        super(model,producer,yearOfProduction);
        this.operatingSystem = operatingSystem;
        this.screenSize = screenSize;
